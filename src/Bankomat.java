@@ -13,7 +13,7 @@ public class Bankomat {
         System.out.println("Guten Tag!");
         do {
 
-            System.out.println("Was möchten Sie tun? \n1) Einzahlen \n2) Abheben \n3) Kontostand ansehen \n4)Beenden\n");
+            System.out.println("Was möchten Sie tun? \n\t1) Einzahlen \n\t2) Abheben \n\t3) Kontostand ansehen \n\t4)Beenden\n");
             int selectionOfUser = scanner.nextInt();
 
 
