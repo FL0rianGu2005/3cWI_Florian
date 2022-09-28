@@ -21,21 +21,21 @@ public class Bankomat {
                 case 1: {
                     System.out.println("Wie viel Geld möchten Sie Einzahlen?");
                     int putInMoney = scanner.nextInt();
-                    System.out.println(putInMoney +"€ wurden Eingezahlt!");
-                    iKontostand = iKontostand+putInMoney;
+                    System.out.println(putInMoney + "€ wurden Eingezahlt!");
+                    iKontostand = iKontostand + putInMoney;
                     break;
                 }
                 case 2: {
                     System.out.println("Wie viel Geld möchten Sie Abheben?");
                     int withdrawMoney = scanner.nextInt();
-                    System.out.println(withdrawMoney+"€ wurden Abgehoben!");
-                    iKontostand = iKontostand-withdrawMoney;
+                    System.out.println(withdrawMoney + "€ wurden Abgehoben!");
+                    iKontostand = iKontostand - withdrawMoney;
 
                     break;
                 }
-                case 3 :{
-                    System.out.println("Ihr Kontostand beträgt: " + iKontostand+"€");
-                break;
+                case 3: {
+                    System.out.println("Ihr Kontostand beträgt: " + iKontostand + "€");
+                    break;
                 }
                 case 4: {
                     System.out.println("Auf Wiedersehen!");
@@ -44,6 +44,6 @@ public class Bankomat {
                 }
 
             }
-        }while (stop == false);
+        } while (stop == false);
     }
 }
