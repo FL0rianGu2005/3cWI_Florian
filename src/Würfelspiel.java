@@ -9,13 +9,14 @@ public class Würfelspiel {
         Random random = new Random();
         int randomizer;
         int KIrandomizer;
-        int resultPlayer = 0;
-        int resultKI=0;
         boolean EndOfGame=false;
 
 
 
         do {
+            int resultPlayer = 0;
+            int resultKI=0;
+
             System.out.println("\t\tWillkommen beim Würfelspiel!\n\n1) Spiel Starten\t\t\t\t2) Spiel Beenden");
             selectionOfUser = scanner.nextInt();
             switch (selectionOfUser) {
@@ -27,21 +28,22 @@ public class Würfelspiel {
                         resultPlayer += randomizer;
                         resultKI+=KIrandomizer;
                     }
-                    System.out.println("Dein Ergebnis: "+resultPlayer+"\t\t\tKI Ergebnis: "+resultKI);
+                    System.out.println("\nDein Ergebnis: "+resultPlayer+"\t\t\tKI Ergebnis: "+resultKI);
 
                     if (resultPlayer>resultKI)
                     {
-                        System.out.println("Gewonnen!");
+                        System.out.println("\nGewonnen!");
                     } else if (resultPlayer==resultKI) {
-                        System.out.println("Unentschieden!");
+                        System.out.println("\nUnentschieden!");
                     } else
                     {
-                        System.out.println("Verloren!");
+                        System.out.println("\nVerloren!");
                     }
 
-                    System.out.println("Möchten Sie nochmals Spielen?\n1) Ja\t\t2) Nein");
+                    System.out.println("\nMöchten Sie nochmals Spielen?\n1) Ja\t\t2) Nein");
                     int Return = scanner.nextInt();
                     if (Return == 2) {
+                        System.out.println("Beendet!");
                         EndOfGame = true;
                     }
                     break;
