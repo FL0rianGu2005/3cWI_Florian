@@ -4,22 +4,23 @@ public class TicTacToe {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        int collumn = 3;
-        int row = 3;
+        char[][] playground = new char[3][3];
 
 
-        char Player1 = 'x';
-        char Player2 = 'o';
+        String selectionOfUser = scanner.next();
+        String[] selection = selectionOfUser.split(",");
+        int rowSelection = Integer.valueOf(selection[0]);
+        int colSelection = Integer.valueOf(selection[1]);
+        playground[rowSelection][colSelection] = 'x';
 
-
-        System.out.println("P1: Choose Position ");
-        int xy = scanner.nextInt();
-        for (int i = 0; i < row; i++) {
-            for (int e = 0; e < collumn; e++) {
-                System.out.print("|" + "");
+        for (int row = 0; row < playground.length; row++) {
+            for (int col = 0; col < playground.length; col++) {
+                System.out.print("|" + playground[col][row]);
 
             }
             System.out.println("|");
         }
+
+
     }
 }
