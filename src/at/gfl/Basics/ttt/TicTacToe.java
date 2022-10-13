@@ -17,7 +17,10 @@ public class TicTacToe {
             String[] selection = selectionOfPlayer1.split(",");
             int rowSelection = Integer.valueOf(selection[0]);
             int colSelection = Integer.valueOf(selection[1]);
-            playground[rowSelection][colSelection] = 'x';
+            if (playground[rowSelection][colSelection]=='\u0000'){
+                playground[rowSelection][colSelection] = 'x';
+            }
+
 
 
             for (int row = 0; row < playground.length; row++) {
