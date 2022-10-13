@@ -31,24 +31,25 @@ public class TicTacToe {
             System.out.println("Player 2:");
 
             String selectionOfPlayer2 = scanner.next();
-
-            if (selectionOfPlayer2==selectionOfPlayer1)
-            {
+            System.out.println(selectionOfPlayer1);
+            System.out.println(selectionOfPlayer2);
+            if (selectionOfPlayer2 == selectionOfPlayer1) {
                 System.out.println("Dieses Feld wurde schon verwendet!");
-            }
-            String[] selection2 = selectionOfPlayer2.split(",");
-            int rowSelection2 = Integer.valueOf(selection2[0]);
-            int colSelection2 = Integer.valueOf(selection2[1]);
-            playground[rowSelection2][colSelection2] = 'o';
+            } else
+            {
+                String[] selection2 = selectionOfPlayer2.split(",");
+                int rowSelection2 = Integer.valueOf(selection2[0]);
+                int colSelection2 = Integer.valueOf(selection2[1]);
+                playground[rowSelection2][colSelection2] = 'o';
 
-            for (int row = 0; row < playground.length; row++) {
-                for (int col = 0; col < playground.length; col++) {
-                    System.out.print("|" + playground[col][row]);
+                for (int row = 0; row < playground.length; row++) {
+                    for (int col = 0; col < playground.length; col++) {
+                        System.out.print("|" + playground[col][row]);
 
+                    }
+                    System.out.println("|");
                 }
-                System.out.println("|");
             }
-
-        }while(playground[1][1] == playground[1][1]);
+        } while (playground[1][1] == playground[1][1]);
     }
 }
