@@ -1,7 +1,9 @@
+package at.gfl.Basics.cbg;
+
 import java.util.Random;
 import java.util.Scanner;
 
-public class Würfelspiel {
+public class Cubegame {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

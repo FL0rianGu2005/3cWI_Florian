@@ -1,3 +1,5 @@
+package at.gfl.Basics.atm;
+
 import java.util.Scanner;
 
 public class Bankomat {
