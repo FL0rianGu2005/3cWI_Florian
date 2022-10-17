@@ -17,10 +17,11 @@ public class TicTacToe {
             String[] selection = selectionOfPlayer1.split(",");
             int rowSelection = Integer.valueOf(selection[0]);
             int colSelection = Integer.valueOf(selection[1]);
-            if (playground[rowSelection][colSelection]=='\u0000'){
+            if (playground[rowSelection][colSelection] == '\u0000') {
                 playground[rowSelection][colSelection] = 'x';
+            } else {
+                System.out.println("Das Feld ist schon belegt!");
             }
-
 
 
             for (int row = 0; row < playground.length; row++) {
@@ -34,25 +35,25 @@ public class TicTacToe {
             System.out.println("Player 2:");
 
             String selectionOfPlayer2 = scanner.next();
-            System.out.println(selectionOfPlayer1);
-            System.out.println(selectionOfPlayer2);
-            if (selectionOfPlayer2 == selectionOfPlayer1) {
-                System.out.println("Dieses Feld wurde schon verwendet!");
-            } else
-            {
-                String[] selection2 = selectionOfPlayer2.split(",");
-                int rowSelection2 = Integer.valueOf(selection2[0]);
-                int colSelection2 = Integer.valueOf(selection2[1]);
-                playground[rowSelection2][colSelection2] = 'o';
 
-                for (int row = 0; row < playground.length; row++) {
-                    for (int col = 0; col < playground.length; col++) {
-                        System.out.print("|" + playground[col][row]);
+            String[] selection2 = selectionOfPlayer2.split(",");
+            int rowSelection2 = Integer.valueOf(selection2[0]);
+            int colSelection2 = Integer.valueOf(selection2[1]);
 
-                    }
-                    System.out.println("|");
-                }
+            if (playground[rowSelection][colSelection] == '\u0000') {
+                playground[rowSelection][colSelection] = 'o';
+            } else {
+                System.out.println("Dieses Fels ist schon belegt!");
             }
+
+            for (int row = 0; row < playground.length; row++) {
+                for (int col = 0; col < playground.length; col++) {
+                    System.out.print("|" + playground[col][row]);
+
+                }
+                System.out.println("|");
+            }
+
         } while (playground[1][1] == playground[1][1]);
     }
 }
