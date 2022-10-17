@@ -7,6 +7,7 @@ public class TicTacToe {
         Scanner scanner = new Scanner(System.in);
 
         char[][] playground = new char[3][3];
+        boolean isPlayer1Active = true;
 
         do {
 
@@ -40,11 +41,20 @@ public class TicTacToe {
             int rowSelection2 = Integer.valueOf(selection2[0]);
             int colSelection2 = Integer.valueOf(selection2[1]);
 
-            if (playground[rowSelection][colSelection] == '\u0000') {
-                playground[rowSelection][colSelection] = 'o';
+            while (!isFieldEmpty(playground, rowSelection2, colSelection2)) {
+                selectionOfPlayer2 = scanner.next();
+                selection2 = selectionOfPlayer2.split(",");
+                rowSelection2 = Integer.valueOf(selection2[0]);
+                colSelection2 = Integer.valueOf(selection2[1]);
+            }
+
+
+            if (playground[rowSelection2][colSelection2] == '\u0000') {
+                playground[rowSelection2][colSelection2] = 'o';
             } else {
                 System.out.println("Dieses Fels ist schon belegt!");
             }
+
 
             for (int row = 0; row < playground.length; row++) {
                 for (int col = 0; col < playground.length; col++) {
@@ -55,5 +65,13 @@ public class TicTacToe {
             }
 
         } while (playground[1][1] == playground[1][1]);
+    }
+
+    public static boolean isFieldEmpty(char[][] field, int row, int col) {
+        if (field[row][col] == '\u0000') {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
