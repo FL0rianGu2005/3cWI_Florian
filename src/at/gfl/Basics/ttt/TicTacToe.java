@@ -30,9 +30,10 @@ public class TicTacToe {
 
 
             if (playground[rowSelection][colSelection] == '\u0000') {
-                char charToPrint = isPlayer1Active?'x':'o';
+                char charToPrint = '1';
+                charToPrint = isPlayer1Active ? 'x' : 'o';
             } else {
-                System.out.println("Dieses Fels ist schon belegt!");
+                System.out.println("Dieses Feld ist schon belegt!");
             }
 
 
