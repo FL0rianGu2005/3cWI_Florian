@@ -10,7 +10,6 @@ public class TicTacToe {
         boolean isPlayer1Active = true;
 
 
-
         do {
             String name = isPlayer1Active ? "Player 1:" : "Player 2";
             System.out.println(name);
@@ -22,6 +21,7 @@ public class TicTacToe {
             int colSelection = Integer.valueOf(selection[1]);
 
             while (!isFieldEmpty(playground, rowSelection, colSelection)) {
+                System.out.println("Dieses Feld ist schon belegt!");
                 selectionOfPlayer = scanner.next();
                 selection = selectionOfPlayer.split(",");
                 rowSelection = Integer.valueOf(selection[0]);
@@ -32,10 +32,8 @@ public class TicTacToe {
             if (playground[rowSelection][colSelection] == '\u0000') {
                 char charToPrint = '1';
                 charToPrint = isPlayer1Active ? 'x' : 'o';
-            } else {
-                System.out.println("Dieses Feld ist schon belegt!");
+                playground[rowSelection][colSelection] = charToPrint;
             }
-
 
             for (int row = 0; row < playground.length; row++) {
                 for (int col = 0; col < playground.length; col++) {
@@ -45,8 +43,45 @@ public class TicTacToe {
                 System.out.println("|");
             }
 
+
+            isPlayer1Active = !isPlayer1Active;
+            hasWinner(playground);
+
         } while (playground[1][1] == playground[1][1]);
+
+
     }
+
+    public static boolean hasWinner(char[][] field) {
+
+        for (int col = 0; col < 3; col++) {
+            if (field[col][0] == field[col][1] && field[col][1] == field[col][2] && field[col][0]!=0) {
+                System.out.println("has winner");
+                return true;
+            }
+        }
+
+        for (int row = 0; row < 3; row++) {
+            if (field[0][row] == field[1][row] && field[1][row] == field[2][row] && field[0][row]!=0) {
+                System.out.println("has winner");
+                return true;
+            }
+        }
+
+        for (int row = 0; row < 3; row++) {
+            for (int col = 0; col < 3; col++) {
+
+            if (field[col][row] == field[col+1][row+1] && field[col][row] == field[col+2][row+2] && field[col][row]!=0) {
+                System.out.println("has winner");
+                return true;
+            }
+            }
+        }
+
+
+        return false;
+    }
+
 
     public static boolean isFieldEmpty(char[][] field, int row, int col) {
         if (field[row][col] == '\u0000') {
