@@ -6,7 +6,9 @@ public class TicTacToe {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+
         char[][] playground = new char[3][3];
+
         boolean isPlayer1Active = true;
 
 
@@ -45,39 +47,38 @@ public class TicTacToe {
 
 
             isPlayer1Active = !isPlayer1Active;
-            hasWinner(playground);
 
-        } while (playground[1][1] == playground[1][1]);
+        } while (!hasWinner(playground));
 
+        System.out.println("Finished");
 
     }
 
     public static boolean hasWinner(char[][] field) {
 
         for (int col = 0; col < 3; col++) {
-            if (field[col][0] == field[col][1] && field[col][1] == field[col][2] && field[col][0]!=0) {
-                System.out.println("has winner");
+            if (field[col][0] == field[col][1] && field[col][1] == field[col][2] && field[col][0] != 0) {
+                System.out.println("winner");
                 return true;
+
             }
         }
 
         for (int row = 0; row < 3; row++) {
-            if (field[0][row] == field[1][row] && field[1][row] == field[2][row] && field[0][row]!=0) {
-                System.out.println("has winner");
+            if (field[0][row] == field[1][row] && field[1][row] == field[2][row] && field[0][row] != 0) {
+                System.out.println("winner");
                 return true;
             }
         }
 
-        for (int row = 0; row < 3; row++) {
-            for (int col = 0; col < 3; col++) {
-
-            if (field[col][row] == field[col+1][row+1] && field[col][row] == field[col+2][row+2] && field[col][row]!=0) {
-                System.out.println("has winner");
-                return true;
-            }
-            }
+        if (field[0][2] == field[2][0] && field[0][2] == field[1][1] && field[2][0] != '\u0000') {
+            System.out.println("winner");
+            return true;
         }
-
+        if (field[2][2] == field[1][1] && field[2][2] == field[0][0] && field[2][2] != '\u0000') {
+            System.out.println("winner");
+            return true;
+        }
 
         return false;
     }
