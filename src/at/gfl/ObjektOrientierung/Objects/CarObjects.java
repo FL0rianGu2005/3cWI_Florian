@@ -6,6 +6,8 @@ public class CarObjects {
     public String serialNumber;
     public int FuelAmmount;
     public int maxFuel;
+    public int range;
+    public int restRange;
 
     public void CarBreaking(){
         System.out.println("Ich bremse");
@@ -33,5 +35,9 @@ public class CarObjects {
         else{
             System.out.println("Übertreib mal nicht");
         }
+    }
+
+    public void getRemainingRange(){
+        this.range=this.restRange-(this.FuelAmmount-this.FuelConsumption);
     }
 }

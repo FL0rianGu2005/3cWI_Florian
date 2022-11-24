@@ -16,6 +16,8 @@ public class Cars {
         c1.serialNumber="F1-75";
         c1.FuelAmmount=30;
         c1.maxFuel=50;
+        c1.range=100;
+        c1.restRange=50;
 
         System.out.println(c1.brand);
         System.out.println(c1.FuelConsumption);
@@ -31,6 +33,9 @@ public class Cars {
         System.out.println("How many times do you want to honk?");
         int honker=scanner.nextInt();
         c1.CarHonking(honker);
+
+        c1.getRemainingRange();
+        System.out.println(c1.range+" km");
 
     }
 }
