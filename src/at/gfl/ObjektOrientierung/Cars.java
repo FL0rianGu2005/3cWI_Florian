@@ -15,9 +15,9 @@ public class Cars {
         c1.setFuelConsumption(17);
         c1.setSerialNumber("F1-75");
         c1.setFuelAmmount(30);
-        c1.maxFuel=50;
-        c1.range=100;
-        c1.restRange=50;
+        c1.setMaxFuel(50);
+        c1.setRange(100);
+        c1.setRestRange(50);
 
         System.out.println(c1.getBrand());
         System.out.println(c1.getSerialNumber());
@@ -35,7 +35,7 @@ public class Cars {
         c1.CarHonking(honker);
 
         c1.getRemainingRange();
-        System.out.println(c1.range+" km");
+        System.out.println(c1.getRestRange()+" km");
 
     }
 }

@@ -5,9 +5,9 @@ public class CarObjects {
     private String brand;
     private String serialNumber;
     private int FuelAmmount;
-    public int maxFuel;
-    public int range;
-    public int restRange;
+    private int maxFuel;
+    private int range;
+    private int restRange;
 
     public void CarBreaking(){
         System.out.println("Ich bremse");
@@ -57,6 +57,18 @@ public class CarObjects {
         this.serialNumber = serialNumber;
     }
 
+    public void setMaxFuel(int maxFuel) {
+        this.maxFuel = maxFuel;
+    }
+
+    public void setRange(int range) {
+        this.range = range;
+    }
+
+    public void setRestRange(int restRange) {
+        this.restRange = restRange;
+    }
+
     public int getFuelAmmount() {
         return FuelAmmount;
     }
@@ -71,5 +83,9 @@ public class CarObjects {
 
     public String getBrand() {
         return brand;
+    }
+
+    public int getRestRange() {
+        return restRange;
     }
 }
