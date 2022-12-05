@@ -1,10 +1,10 @@
 package at.gfl.ObjektOrientierung.Objects;
 
 public class CarObjects {
-    public int FuelConsumption;
-    public String brand;
-    public String serialNumber;
-    public int FuelAmmount;
+    private int FuelConsumption;
+    private String brand;
+    private String serialNumber;
+    private int FuelAmmount;
     public int maxFuel;
     public int range;
     public int restRange;
@@ -39,5 +39,37 @@ public class CarObjects {
 
     public void getRemainingRange(){
         this.range=this.restRange-(this.FuelAmmount-this.FuelConsumption);
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public void setFuelAmmount(int fuelAmmount) {
+        FuelAmmount = fuelAmmount;
+    }
+
+    public void setFuelConsumption(int fuelConsumption) {
+        FuelConsumption = fuelConsumption;
+    }
+
+    public void setSerialNumber(String serialNumber) {
+        this.serialNumber = serialNumber;
+    }
+
+    public int getFuelAmmount() {
+        return FuelAmmount;
+    }
+
+    public int getFuelConsumption() {
+        return FuelConsumption;
+    }
+
+    public String getSerialNumber() {
+        return serialNumber;
+    }
+
+    public String getBrand() {
+        return brand;
     }
 }

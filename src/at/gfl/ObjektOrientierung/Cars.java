@@ -11,22 +11,22 @@ public class Cars {
         Scanner scanner = new Scanner(System.in);
 
         CarObjects c1=new CarObjects();
-        c1.brand="Ferrari";
-        c1.FuelConsumption=6;
-        c1.serialNumber="F1-75";
-        c1.FuelAmmount=30;
+        c1.setBrand("Ferrari");
+        c1.setFuelConsumption(17);
+        c1.setSerialNumber("F1-75");
+        c1.setFuelAmmount(30);
         c1.maxFuel=50;
         c1.range=100;
         c1.restRange=50;
 
-        System.out.println(c1.brand);
-        System.out.println(c1.FuelConsumption);
-        System.out.println(c1.serialNumber);
+        System.out.println(c1.getBrand());
+        System.out.println(c1.getSerialNumber());
+        System.out.println(c1.getFuelConsumption());
 
         c1.CarBreaking();
-        System.out.println(c1.FuelAmmount);
+        System.out.println(c1.getFuelAmmount());
         c1.CarDriving();
-        System.out.println(c1.FuelAmmount);
+        System.out.println(c1.getFuelAmmount());
 
         c1.TurboBoost();
 
