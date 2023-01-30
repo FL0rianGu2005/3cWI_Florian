@@ -4,7 +4,7 @@ public class Engine {
     private enum TYPE {GAS, DIESEL}
 
     private int horsePower;
-    private String type;
+    private TYPE type;
 
     public Engine(int horsePower, TYPE type) {
         this.horsePower = horsePower;
