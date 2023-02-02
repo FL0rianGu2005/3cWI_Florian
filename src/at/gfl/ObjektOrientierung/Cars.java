@@ -1,6 +1,8 @@
 package at.gfl.ObjektOrientierung;
 
 import at.gfl.ObjektOrientierung.Objects.CarObjects;
+import at.gfl.ObjektOrientierung.Objects.Tyres;
+import at.gfl.ObjektOrientierung.Objects.Engine;
 
 import java.util.Scanner;
 
@@ -36,6 +38,8 @@ public class Cars {
 
         c1.getRemainingRange();
         System.out.println(c1.getRestRange()+" km");
+
+
 
     }
 }

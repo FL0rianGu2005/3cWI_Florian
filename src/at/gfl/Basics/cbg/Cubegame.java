@@ -24,8 +24,8 @@ public class Cubegame {
             switch (selectionOfUser) {
                 case 1:
                     for (int i = 1; i <= 6; i++) {
-                        randomizer = random.nextInt(1, 7);
-                        KIrandomizer=random.nextInt(1,7);
+                        randomizer = random.nextInt();
+                        KIrandomizer=random.nextInt();
                         System.out.println(i+"." + " Wurf: " + randomizer+"\t\t\t\t\t"+i+"."+" KI-Wurf: "+KIrandomizer);
                         resultPlayer += randomizer;
                         resultKI+=KIrandomizer;

@@ -9,6 +9,8 @@ public class CarObjects {
     private int range;
     private int restRange;
 
+
+
     public void CarBreaking(){
         System.out.println("Ich bremse");
     }
@@ -88,4 +90,5 @@ public class CarObjects {
     public int getRestRange() {
         return restRange;
     }
+
 }
