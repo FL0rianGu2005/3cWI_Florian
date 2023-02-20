@@ -1,4 +1,6 @@
 package at.gfl.ObjektOrientierung.Objects;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CarObjects {
     private int FuelConsumption;
@@ -6,8 +8,21 @@ public class CarObjects {
     private String serialNumber;
     private int FuelAmmount;
     private int maxFuel;
-    private int range;
     private int restRange;
+
+    private List<Tyres> tyresList;
+
+
+    public CarObjects(int FuelConsumption, String brand, String serialNumber, int FuelAmmount, int maxFuel, int restRange, List tyresList) {
+        this.tyresList = new ArrayList<>();
+        this.FuelConsumption = FuelConsumption;
+        this.brand = brand;
+        this.serialNumber = serialNumber;
+        this.FuelAmmount = FuelAmmount;
+        this.maxFuel = maxFuel;
+        this.restRange = restRange;
+        this.tyresList = tyresList;
+    }
 
 
 
