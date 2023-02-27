@@ -2,13 +2,12 @@ package at.gfl.ObjektOrientierung;
 
 import at.gfl.ObjektOrientierung.Objects.CarObjects;
 import at.gfl.ObjektOrientierung.Objects.Tyres;
-import at.gfl.ObjektOrientierung.Objects.Engine;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Cars {
+public class Main {
     public static void main(String[] args)
     {
         Tyres t1 = new Tyres("Pirelli",22,24,0,"Slicks");
