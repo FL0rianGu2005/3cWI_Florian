@@ -12,4 +12,20 @@ public class Mirrors {
         System.out.println(this.ammountMirrors);
         System.out.println(this.sizeofMirror);
     }
+
+    public int getAmmountMirrors() {
+        return ammountMirrors;
+    }
+
+    public void setAmmountMirrors(int ammountMirrors) {
+        this.ammountMirrors = ammountMirrors;
+    }
+
+    public int getSizeofMirror() {
+        return sizeofMirror;
+    }
+
+    public void setSizeofMirror(int sizeofMirror) {
+        this.sizeofMirror = sizeofMirror;
+    }
 }

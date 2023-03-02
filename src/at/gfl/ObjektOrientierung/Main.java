@@ -1,6 +1,7 @@
 package at.gfl.ObjektOrientierung;
 
 import at.gfl.ObjektOrientierung.Objects.CarObjects;
+import at.gfl.ObjektOrientierung.Objects.Mirrors;
 import at.gfl.ObjektOrientierung.Objects.Tyres;
 
 import java.util.ArrayList;
@@ -14,16 +15,19 @@ public class Main {
         Tyres t2 = new Tyres("Pirelli",22,24,0,"Slicks");
         Tyres t3 = new Tyres("Pirelli",22,24,0,"Slicks");
         Tyres t4 = new Tyres("Pirelli",22,24,0,"Slicks");
+        Mirrors m1 = new Mirrors(2,10);
+        List<Mirrors> mirrors = new ArrayList<>();
         List<Tyres> tyres = new ArrayList<>();
         tyres.add(t1);
         tyres.add(t2);
         tyres.add(t3);
         tyres.add(t4);
+        mirrors.add(m1);
 
 
         Scanner scanner = new Scanner(System.in);
 
-        CarObjects c1=new CarObjects(17,"Ferrari","SF23",30,50,100,50,tyres);
+        CarObjects c1=new CarObjects(17,"Ferrari","SF23",30,50,100,50,tyres,mirrors);
 
         c1.setBrand("Ferrari");
         c1.setFuelConsumption(17);
@@ -52,8 +56,10 @@ public class Main {
 
         c1.getRemainingRange();
         System.out.println(c1.getRestRange()+" km");
-
+        System.out.println("Tire Informations:");
         t1.TyreInforamtions();
+        System.out.println("Mirror Informations:");
+        m1.MIrrorInforamtions();
 
 
 

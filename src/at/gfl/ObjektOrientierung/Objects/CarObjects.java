@@ -12,9 +12,10 @@ public class CarObjects {
     private int restRange;
 
     private List<Tyres> tyresList;
+    private List<Mirrors> mirrorsList;
 
 
-    public CarObjects(int FuelConsumption, String brand, String serialNumber, int FuelAmmount, int maxFuel, int range, int restRange, List tyresList) {
+    public CarObjects(int FuelConsumption, String brand, String serialNumber, int FuelAmmount, int maxFuel, int range, int restRange, List tyresList, List mirrorsList) {
         this.tyresList = new ArrayList<>();
         this.FuelConsumption = FuelConsumption;
         this.brand = brand;
@@ -24,6 +25,7 @@ public class CarObjects {
         this.range = range;
         this.restRange = restRange;
         this.tyresList = tyresList;
+        this.mirrorsList = mirrorsList;
     }
 
 
@@ -115,5 +117,13 @@ public class CarObjects {
 
     public void setTyresList(List<Tyres> tyresList) {
         this.tyresList = tyresList;
+    }
+
+    public List<Mirrors> getMirrorsList() {
+        return mirrorsList;
+    }
+
+    public void setMirrorsList(List<Mirrors> mirrorsList) {
+        this.mirrorsList = mirrorsList;
     }
 }
