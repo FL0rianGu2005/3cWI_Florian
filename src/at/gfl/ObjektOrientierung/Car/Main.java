@@ -1,8 +1,8 @@
-package at.gfl.ObjektOrientierung;
+package at.gfl.ObjektOrientierung.Car;
 
-import at.gfl.ObjektOrientierung.Objects.CarObjects;
-import at.gfl.ObjektOrientierung.Objects.Mirrors;
-import at.gfl.ObjektOrientierung.Objects.Tyres;
+import at.gfl.ObjektOrientierung.Car.Objects.CarObjects;
+import at.gfl.ObjektOrientierung.Car.Objects.Mirrors;
+import at.gfl.ObjektOrientierung.Car.Objects.Tyres;
 
 import java.util.ArrayList;
 import java.util.List;

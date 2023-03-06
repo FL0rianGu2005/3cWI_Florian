@@ -1,4 +1,4 @@
-package at.gfl.ObjektOrientierung.Objects;
+package at.gfl.ObjektOrientierung.Car.Objects;
 
 public class Mirrors {
     private int ammountMirrors;

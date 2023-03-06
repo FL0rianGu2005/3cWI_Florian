@@ -1,4 +1,4 @@
-package at.gfl.ObjektOrientierung.Objects;
+package at.gfl.ObjektOrientierung.Car.Objects;
 import java.util.ArrayList;
 import java.util.List;
 
