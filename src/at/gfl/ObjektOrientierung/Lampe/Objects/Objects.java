@@ -1,4 +1,4 @@
-package at.gfl.ObjektOrientierung.Lampe.Objets;
+package at.gfl.ObjektOrientierung.Lampe.Objects;
 
 public class Objects {
         private String Name;
