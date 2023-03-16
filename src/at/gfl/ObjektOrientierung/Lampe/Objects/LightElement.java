@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class LightElement {
     private List<Objects> LightElement;
 
-    public LightObject(){
+    public void LightObject(){
         this.LightElement = new ArrayList<>();
     }
     public void addObjects(Objects objects){

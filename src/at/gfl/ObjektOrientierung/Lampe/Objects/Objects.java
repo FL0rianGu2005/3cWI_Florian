@@ -18,7 +18,7 @@ public class Objects {
     }
 
     public void setName(String name) {
-        Name = name;
+       Name = name;
     }
 
     public String getColor() {
