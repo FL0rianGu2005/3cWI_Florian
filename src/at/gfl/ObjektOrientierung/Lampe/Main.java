@@ -21,9 +21,6 @@ public class Main {
         System.out.println(o4);
 
         LightElement l1 = new LightElement();
-
-        l1.addObjects(o1);
-        l1.addObjects(o4);
         l1.showLightNames();
 
     }

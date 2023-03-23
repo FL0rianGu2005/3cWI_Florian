@@ -1,4 +1,6 @@
 package at.gfl.ObjektOrientierung.Car.Objects;
+import at.gfl.ObjektOrientierung.Vererbung.Truck;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,12 +12,13 @@ public class CarObjects {
     private int maxFuel;
     private int range;
     private int restRange;
+    private String Color;
 
     private List<Tyres> tyresList;
     private List<Mirrors> mirrorsList;
 
 
-    public CarObjects(int FuelConsumption, String brand, String serialNumber, int FuelAmmount, int maxFuel, int range, int restRange, List tyresList, List mirrorsList) {
+    public CarObjects(int FuelConsumption, String brand, String serialNumber, int FuelAmmount, int maxFuel, int range, int restRange, List tyresList, List mirrorsList, String Color) {
         this.tyresList = new ArrayList<>();
         this.FuelConsumption = FuelConsumption;
         this.brand = brand;
@@ -26,6 +29,7 @@ public class CarObjects {
         this.restRange = restRange;
         this.tyresList = tyresList;
         this.mirrorsList = mirrorsList;
+        this.Color = Color;
     }
 
 
@@ -56,6 +60,14 @@ public class CarObjects {
         else{
             System.out.println("Übertreib mal nicht");
         }
+    }
+
+    public String getColor() {
+        return Color;
+    }
+
+    public void setColor(String color) {
+        Color = color;
     }
 
     public void getRemainingRange(){

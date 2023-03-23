@@ -1,16 +1,25 @@
 package at.gfl.ObjektOrientierung.Car;
 
 import at.gfl.ObjektOrientierung.Car.Objects.CarObjects;
+import at.gfl.ObjektOrientierung.Car.Objects.Engine;
 import at.gfl.ObjektOrientierung.Car.Objects.Mirrors;
 import at.gfl.ObjektOrientierung.Car.Objects.Tyres;
+import at.gfl.ObjektOrientierung.Vererbung.Truck;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class Main {
+    public Main(Engine engine, String brand, String color) {
+    }
+
+    public Main(String v10, String mercdes, String black, String trailer) {
+    }
+
     public static void main(String[] args)
     {
+        Truck Tr1 = new Truck("V10", "Mercdes", "Black", "O1-Trailer");
         Tyres t1 = new Tyres("Pirelli",22,24,0,"Slicks");
         Tyres t2 = new Tyres("Pirelli",22,24,0,"Slicks");
         Tyres t3 = new Tyres("Pirelli",22,24,0,"Slicks");
@@ -27,7 +36,7 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        CarObjects c1=new CarObjects(17,"Ferrari","SF23",30,50,100,50,tyres,mirrors);
+        CarObjects c1=new CarObjects(17,"Ferrari","SF23",30,50,100,50,tyres,mirrors, "Red");
 
         c1.setBrand("Ferrari");
         c1.setFuelConsumption(17);
@@ -61,6 +70,7 @@ public class Main {
         System.out.println("Mirror Informations:");
         m1.MIrrorInforamtions();
 
+        System.out.println();
 
 
 
