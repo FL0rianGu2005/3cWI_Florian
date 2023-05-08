@@ -4,16 +4,27 @@ public class Engine {
     private enum TYPE {GAS, DIESEL}
 
     private int horsePower;
-    private String type;
+    private TYPE type;
+
+    private int amount;
+
+    public Engine() {
+        this.horsePower = horsePower;
+    }
 
     public Engine(int horsePower, TYPE type) {
         this.horsePower = horsePower;
         this.type = type;
     }
 
+    public int drive(){return amount;}
 
-    public void drive(int amount) {
-        System.out.println("the motor is running with " + amount);
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
     }
 
     public int getHorsePower() {
@@ -23,4 +34,7 @@ public class Engine {
     public TYPE getType() {
         return type;
     }
+
+
 }
+

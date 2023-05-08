@@ -1,6 +1,7 @@
 package at.gfl.ObjektOrientierung;
 
 import at.gfl.ObjektOrientierung.Objects.CarObjects;
+import at.gfl.ObjektOrientierung.Objects.Engine;
 
 import java.util.Scanner;
 
@@ -10,14 +11,7 @@ public class Cars {
 
         Scanner scanner = new Scanner(System.in);
 
-        CarObjects c1=new CarObjects();
-        c1.setBrand("Ferrari");
-        c1.setFuelConsumption(17);
-        c1.setSerialNumber("F1-75");
-        c1.setFuelAmmount(30);
-        c1.setMaxFuel(50);
-        c1.setRange(100);
-        c1.setRestRange(50);
+        CarObjects c1=new CarObjects(50, 100, 50, 30, "F1-75", "Ferrari", 17);
 
         System.out.println(c1.getBrand());
         System.out.println(c1.getSerialNumber());
@@ -36,6 +30,8 @@ public class Cars {
 
         c1.getRemainingRange();
         System.out.println(c1.getRestRange()+" km");
+
+
 
     }
 }

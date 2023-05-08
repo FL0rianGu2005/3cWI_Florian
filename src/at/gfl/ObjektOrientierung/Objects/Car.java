@@ -9,6 +9,16 @@ public class CarObjects {
     private int range;
     private int restRange;
 
+    public CarObjects(int restRange, int range, int maxFuel, int FuelAmmount, String serialNumber, String brand, int FuelConsumption) {
+        this.restRange = restRange;
+        this.range=range;
+        this.maxFuel=maxFuel;
+        this.FuelAmmount=FuelAmmount;
+        this.serialNumber=serialNumber;
+        this.brand=brand;
+        this.FuelConsumption=FuelConsumption;
+    }
+
     public void CarBreaking(){
         System.out.println("Ich bremse");
     }
